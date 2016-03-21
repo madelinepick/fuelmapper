@@ -1,0 +1,73 @@
+<h1>FUELMAPPER</h1>
+  <h2>Map your available calories during Ironman</h2>
+  <form action="" class="fuelForm">
+    <section class="formrow">
+      <section class="formcolL">
+        <h3 class="formHeader">Basic Info</h3>
+      </section>
+      <section class="formcolL"></section>
+      <section class="formcolR">
+        <h3 class="formHeader flavors">Flavors</h3>
+      </section>
+    </section>
+    <section class="formrow">
+      <section class="formcolL">
+        <label for="swimpace">Swim Pace</label><br>
+        <input name="swimpace" type="number" step="any" placeholder="min/mi" min=20 max=70 required><br>
+        <label for="bikepace">Bike Pace</label><br>
+        <input name="bikepace" type="number" step="any" placeholder="mph" min=13 max=29 required><br>
+        <label for="runpace">Run Pace</label><br>
+        <input name="runpace" type="number" step="any" placeholder="mph" min=4 max=10 required><br>
+        <label for="hr">HR at 75% Effort</label><br>
+        <input name="hr" type="number" step="any" placeholder="beats/min" min=140 max=170 required><br>
+      </section>
+      <section class="formcolL">
+        <label for="weight">Weight</label><br>
+        <input name="weight" type="number" step="any" placeholder="lbs" min=100 max=450 required><br>
+        <label for="age">Age</label><br>
+        <input name="age" type="number" step="any" min=18 max=100 required><br>
+        <label for="gender">Gender</label><br>
+        <input name="gender" value="f" type="radio" required>
+        <label for="gender">Female</label><br>
+        <input name="gender" value="m" type="radio" required>
+        <label for="gender">Male</label><br>
+        <input name="gender" value="o" type="radio" required>
+        <label for="gender">Other</label>
+      </section>
+      <section class="formcolR">
+        <h3 class="formHeader flavors2">Flavors</h3>
+        <h5 class="formSub">(Choose at least three)</h5>
+        <input name="berry" value="berry" type="radio">
+        <label for="berry">Berry</label><br>
+        <input name="citrus" value="citrus" type="radio">
+        <label for="citrus">Citrus</label><br>
+        <input name="lemonlime" value="lemon" type="radio">
+        <label for="lemonlime">Lemon-lime</label><br>
+        <input name="fruit" value="fruit" type="radio">
+        <label for="fruit">Other fruit</label><br>
+        <input name="coffee" value="coffee" type="radio">
+        <label for="coffee">Coffee</label><br>
+        <input name="chocolate" value="chocolate" type="radio">
+        <label for="chocolate">Chocolate</label><br>
+        <input name="caramel" value="caramel" type="radio">
+        <label for="caramel">Caramel/honey</label><br>
+        <input name="nuts" value="nuts" type="radio">
+        <label for="nuts">Nuts</label><br>
+      </section>
+    </section>
+    <input type="submit" value="create your chart" id="submit">
+  </form>
+
+  <section id="mychart" class="chartrow">
+    <h1 class="charttitle">Carbohydrate calories available during Ironman</h1>
+    <div class="chart"></div>
+    <button class="meaning">What does this mean?</button>
+    <button class="clear">Clear</button>
+  </section>
+  <section class="chartrow">
+    <div class="chartInfo" id="explain"></div>
+  </section>
+  <section class="chartrow" id="fuellist">
+    <div class="fueltitle"></div>
+    <div class="fuelrow"></div>
+  </section>
