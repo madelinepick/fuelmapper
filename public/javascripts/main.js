@@ -64,6 +64,14 @@ var lineplot = canvas.append("polyline")
                       fill: "none",
                       stroke: "black"
                     });
+var label = canvas.append("text")
+                  .attr("x", w/2+"px")
+                  .attr("y", h+"px")
+                  .attr("class", "hour")
+                  .attr("fill", "#4489d9")
+                  .attr("font-size", "15px")
+                  .attr("font-family", "Open Sans")
+                  .text("Hours");
 
 
   $(".fuelForm").on("submit", function(){
@@ -226,6 +234,14 @@ var lineplot = canvas.append("polyline")
           .ease("linear")
           .attr("transform", "translate("+newpadding+",0)")
           .call(newyAxis);
+    canvas.select(".hour")
+          .transition()
+          .delay(1000)
+          .duration(2000)
+          .ease("linear")
+          .attr("x", neww/2+"px")
+          .attr("y", newh+"px");
+
 
     var chartHTML = '<div class="colL"><h3 class="infostyle">My Numbers</h3><div class="numbersrow"><div class="numberitem"><h4 class="number">'+Math.round(information.totaltime)+'+</h4><p class="numbersmall">Total time</p></div><div class="numberitem offset"><h4 class="number">'+eat+'</h4><p class="numbersmall">Ideal cals/hour</p></div></div><div class="numbersrow"><div class="numberitem"><h4 class="number">'+Math.round(information.swimburn*2)+'</h4><p class="numbersmall">Swim calorie burn</p></div><div class="numberitem offset"><h4 class="number">'+Math.round(information.bikeburn*2)+'</h4><p class="numbersmall">Bike calorie burn</p></div><div class="numberitem offset"><h4 class="number">'+Math.round(information.runburn*2)+'</h4><p class="numbersmall">Run calorie burn</p></div></div></div><div class="colR"><h3 class="infostyle">What is this graph saying?</h3><ul><h5 class="title1">Carbohydrate Calories&nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></h5><li class="list1">First off, this graph is only showing immediately available carbohydrate calories, not calories stored as fat. Your body fuels endurance races from both sources, but you can continue to take in usable carbohydrates during a race, while you rely on existing fat sources.</li><h5 class="title2">Stored glycogen&nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></h5><li class="list2">You will start off with an amount of stored glycogen based on your weight. Your stored glycogen is '+information.stored +' calories.</li><h5 class="title3">Burn rate&nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></h5><li class="list3">Each dip in the graph represent the carbohydrate calories you burn per hour, roughly half of your total calories burned. You burn '+Math.round(information.swimburn*2)+' calories per hour while swimming, '+Math.round(information.runburn*2)+' calories per hour while running and '+Math.round(information.bikeburn*2)+' calories per hour while biking.</li><h5 class="title4">Fueling&nbsp;&nbsp;<i class="fa fa-angle-down fa-lg"></i></h5><li class="list4">Each increase in the graph is from eating during the race. Our model seeks to find your optimal calorie intake based on eating just enough to make sure you do not run out of carbohydrate calories by the end of the race. This graph is showing that your optimal calorie intake is '+eat+' calories per hour.</li></ul></div>';
 

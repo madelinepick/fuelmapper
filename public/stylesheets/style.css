@@ -10,6 +10,7 @@ body{
     font-family: "Lato", sans-serif;
     font-weight: 300;
     background-color: white;
+    margin: 0px;
 }
 h1, h2{
   text-align: center;
@@ -255,6 +256,19 @@ a {
   border-left: 1px solid rgb(149, 145, 147);
 }
 
+footer{
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #4489d9;
+  color: white;
+}
+.footer{
+  display: inline;
+  margin-left: 40px;
+  font-size: 12px;
+}
+
 @media only screen and (min-width: 650px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1){
   form{
     width: 75%;
@@ -360,5 +374,8 @@ a {
   }
   .charttitle{
     margin-top: 0px;
+  }
+  .footer{
+    display:block;
   }
 }
