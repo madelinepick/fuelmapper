@@ -1,10 +1,14 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
 body{
   background-color: white;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   color: #333;
-  margin: 0px;
 }
+
 .hero{
   background-image: url(../images/runner.jpg);
   background-position: right;
@@ -88,10 +92,51 @@ footer{
   padding-bottom: 15px;
   background-color: #4489d9;
   color: white;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:25px;
+  width:100%;
 }
-.footer{
+footer > p{
   display: inline;
-  margin-left: 40px;
+  margin: 15px;
+}
+#left {
+    width: 10%;
+    height: 100%;
+    position: fixed;
+    background: #4489d9;
+}
+#right {
+    width: 90%;
+    height: auto;
+    position: absolute;
+    right: 0;
+}
+.navtitle{
+  margin: 0px;
+  text-align: center;
+  color: white;
+}
+h1.navtitle{
+  font-size: 70px;
+}
+h2.navtitle{
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+nav > a{
+  margin-left: 20%;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display:inline-block;
+}
+
+a{
+  font-size: 12px;
+  font-weight: 300;
+  color: white;
 }
 @media only screen and (min-width: 650px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1){
   .hero{

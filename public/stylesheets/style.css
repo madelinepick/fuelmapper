@@ -6,6 +6,10 @@ form{
   padding: 20px;
   margin: 30px auto 50px auto;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+}
 body{
     font-family: "Lato", sans-serif;
     font-weight: 300;
@@ -267,6 +271,20 @@ footer{
   display: inline;
   margin-left: 40px;
   font-size: 12px;
+}
+
+#left {
+    width: 10%;
+    height: 100%;
+    position: fixed;
+    outline: 1px solid;
+}
+#right {
+    width: 90%;
+    height: auto;
+    outline: 1px solid;
+    position: absolute;
+    right: 0;
 }
 
 @media only screen and (min-width: 650px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1){
